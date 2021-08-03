@@ -10,7 +10,7 @@ its so lightway and fast
 it reduce developing time and prevent to to define any intervals and functions for it 
 
 <kbd>
-<img src="https://github.com/Amirnajafi/react-native-persian-date-picker/blob/master/demo/demo.jpg?raw=true">
+<img src="https://github.com/Amirnajafi/react-native-persian-date-picker/blob/master/demo/demo.gif?raw=true">
 </kbd>
 
 The package is both **React** and **React-native** compatible.
@@ -65,7 +65,15 @@ const CountDown = () => {
 :------------ |:---------------| :-----|
 | **`time`** | `This is initial time , Timer or Count down start counting at this value` | Mandetory|
 
-## Options
+## useTimer Options
+| Prop | Type | Description | Default
+:------------ |:---------------| :-----| :-----|
+| **` countOnFocus`** | `Boolean` | Optional. if `true` its stop counting when page is not focus | false,
+| **` interval`** | `Number` | Optional. the interval of counter in `seconds` | 1,
+| **` autoStart`** | `Boolean` | Optional. if true it start counting as hooks loaded | true,
+| **` stop_time`** |  `Number` | Optional. if passing number it stop counting on that number = null,
+
+## useTimer Options
 | Prop | Type | Description | Default
 :------------ |:---------------| :-----| :-----|
 | **` countOnFocus`** | `Boolean` | Optional. if `true` its stop counting when page is not focus | false,
