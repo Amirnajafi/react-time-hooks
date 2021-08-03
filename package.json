@@ -1,73 +1,53 @@
 {
   "name": "react-time-hooks",
-  "version": "1.0.7",
+  "version": "1.0.10",
   "description": "React and React-native time and countdown hook",
-  "main": "src/index.js",
-  "private": false,
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
+  "author": "Amirnajafi",
+  "license": "MIT",
+  "repository": "https://github.com/Amirnajafi/react-time-hooks",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.js",
+  "engines": {
+    "node": ">=10"
   },
   "scripts": {
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/ -d dist --copy-files",
-    "pretest": "npm run lint",
-    "lint": "eslint .",
-    "test": "eslint ."
-  },
-  "files": [
-    "src/"
-  ],
-  "keyword": [
-    "persian",
-    "jalaali",
-    "calendar",
-    "datepicker",
-    "timer",
-    "hooks",
-    "hook",
-    "countdown",
-    "picker",
-    "date",
-    "react",
-    "react-native",
-    "ios",
-    "android"
-  ],
-  "author": {
-    "name": "Amir Najafi",
-    "email": "amir.najafi66@gmail.com"
-  },
-  "license": "MIT",
-  "lint-staged": {
-    "*.{js,json,css,md}": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.9",
-    "@babel/preset-react": "^7.14.5"
+    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs",
+    "prepare": "run-s build",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom",
+    "predeploy": "cd example && yarn install && yarn run build",
+    "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": ">=16.8.0"
+    "react": "^16.0.0"
   },
-  "homepage": "https://github.com/Amirnajafi/react-time-hooks",
-  "bugs": {
-    "url": "https://github.com/Amirnajafi/react-time-hooks/issues"
+  "devDependencies": {
+    "microbundle-crl": "^0.13.10",
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "^3.4.1"
   },
-  "contributors": [
-    {
-      "name": "amirnajafi",
-      "email": "amir.najafi66@gmail.com"
-    }
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Amirnajafi/react-time-hooks"
-  }
+  "files": [
+    "dist"
+  ]
 }
