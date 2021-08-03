@@ -1,6 +1,6 @@
 {
   "name": "react-time-hooks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React and React-native time and countdown hook",
   "main": "src/index.js",
   "scripts": {
