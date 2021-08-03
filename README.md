@@ -1,4 +1,4 @@
-# React Time hooks
+# React | React-native Time hooks
 [![NPM Version](https://img.shields.io/npm/v/react-native-jalaali-date-picker.svg?style=flat)](https://www.npmjs.com/package/react-time-hooks)
 <!-- [![Build Status](https://travis-ci.org/rghorbani/react-native-persian-calendar-picker.svg?branch=master)](https://travis-ci.org/rghorbani/react-native-persian-calendar-picker) -->
 
