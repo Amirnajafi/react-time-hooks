@@ -1,11 +1,16 @@
 {
   "name": "react-time-hooks",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React and React-native time and countdown hook",
   "main": "src/index.js",
-  "module": "src/index.js",
+  "private": false,
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && babel src/index.js -d dist --copy-files",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/ -d dist --copy-files",
     "pretest": "npm run lint",
     "lint": "eslint .",
     "test": "eslint ."
@@ -41,11 +46,6 @@
     ]
   },
   "dependencies": {},
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
-  },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
     "@babel/core": "^7.14.8",
