@@ -31,8 +31,10 @@ const useTimer = (time = 0, options = {}) => {
         }, interval * 1000)
     }
     const reset = () => {
-        state.time = interval
+        clearInterval(state.interval)
+        state.time = time
         setState({ ...state })
+        play()
     }
     const puase = () => {
         clearInterval(state.interval)

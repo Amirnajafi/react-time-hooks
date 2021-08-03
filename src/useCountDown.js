@@ -30,8 +30,10 @@ const useCountDown = (time = 60, options = {}) => {
     }
 
     const reset = () => {
-        state.time = 0
+        clearInterval(state.interval)
+        state.time = time
         setState({ ...state })
+        play()
     }
 
     const puase = () => {
