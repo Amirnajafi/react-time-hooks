@@ -1,66 +1,77 @@
-# React Native Jalaali (Persian) DatePicker
-[![NPM Version](https://img.shields.io/npm/v/react-native-jalaali-date-picker.svg?style=flat)](https://www.npmjs.com/package/react-native-jalaali-date-picker)
+# React Time hooks
+[![NPM Version](https://img.shields.io/npm/v/react-native-jalaali-date-picker.svg?style=flat)](https://www.npmjs.com/package/react-time-hooks)
 <!-- [![Build Status](https://travis-ci.org/rghorbani/react-native-persian-calendar-picker.svg?branch=master)](https://travis-ci.org/rghorbani/react-native-persian-calendar-picker) -->
 
 
-This is a Jalaali (Persian) Date Picker Component for React Native
-
+Time hooks help you to use timer and countdown hook in your react and react-native projects 
+<br>
+its so lightway and fast 
+<br>
+it reduce developing time and prevent to to define any intervals and functions for it 
 
 <kbd>
 <img src="https://github.com/Amirnajafi/react-native-persian-date-picker/blob/master/demo/demo.jpg?raw=true">
 </kbd>
 
-The package is both **Android** and **iOS** compatible.
+The package is both **React** and **React-native** compatible.
 
 ## Installation
-`$ npm install --save react-native-jalaali-date-picker`
+`$ npm install --save react-time-hooks`
 or 
 
-`$ yarn add react-native-jalaali-date-picker`
+`$ yarn add react-time-hooks`
 # Prerequisites
-
-DatePicker requires Moment JS.  Date props may be anything parseable by Moment: Javascript Date, Moment date, or ISO8601 datetime string.
-
+Time hook has no requirement dependencies
 ## Usage
 
 How to use it:
 ``` 
-import React, {Component} from 'react';
-import DatePicker from 'react-native-jalaali-date-picker'
+import React from 'react';
+import {useCountDown , useTimer} from 'react-time-hooks'
 
-export default class App extends Component {
+
+/* default options 
+    {
+        countOnFocus = false,
+        interval = 1,
+        autoStart = true,
+        stop_time = null,
+    }
+*/ 
+
+
+const Timer = () => {
+    const options =  {} 
+    const {time , play , reset , pause} = useTimer(0 , options)
+    console.log(time)
     render() {
-        return (
-            <DatePicker
-                showTitleDate={true}
-                onChangeDate={(date)=>{
-                console.log(date)
-            }}
-            />
-        );
+        return ();
     }
 }
+
+const CountDown = () => {
+    const options =  {} 
+    const {time , play , reset , pause} = useCountDown(60 , options)
+    console.log(time)
+    render() {
+        return ();
+    }
+}
+
 ```
 
-## PersianCalendarPicker props
+## Default time
 | Prop | Type | Description |
 :------------ |:---------------| :-----|
-| **`defDate`** | `Moment date` | Optional. Open date picker with custome date. Default is `today` |
-| **`defDateString`** | `Strings` | Optional. Open date picker with custome string . Eg. `2017/02/04`  |
-| **`style`** | `ViewStyle` | Optional. Main Datepicker style . Default is '{}' |
-| **`showTitleDate`** | `Boolean` |  Optional. Show current date in the header of date picker . Default is `false` |
-| **`titleDateFormat`** | `String` |  Optional. Change format of header date . Default is `dddd - jMM - jYYYY` |
-| **`TitleDateStyle`** | `ViewStyle` |  Optional. Change style of header dare. Default is `{}` |
-| **`btnColor`** | `String` | Optional. BackgroundColor for Top and bottom Buttons |
-| **`btnStyle`** | `ViewStyle` | Optional. Style Bottom and Top Buttons.|
-| **`btnUnderlayColor`** | `String` | Optional. UderlayColor colors for buttons |
-| **`arrowTintColor`** | `String` | Optional. Change color of buttons arrow . |
-| **`arrowSize`** | `Number` | Optional. Change arrows size . |
-| **`dateBoxStyle`** | `ViewStyle` | Optional. Middle date box style . |
-| **`dateStyle`** | `ViewStyle` | Optional. Change current date style like fontFamily , color , FontSize . |
-| **`onChangeDate`** | `Function` | Optional. return date on changing |
+| **`time`** | `This is initial time , Timer or Count down start counting at this value` | Mandetory|
 
-
+## Options
+| Prop | Type | Description | Default
+:------------ |:---------------| :-----| :-----|
+| **` countOnFocus`** | `Boolean` | Optional. if `true` its stop counting when page is not focus | false,
+| **` interval`** | `Number` | Optional. the interval of counter in `seconds` | 1,
+| **` autoStart`** | `Boolean` | Optional. if true it start counting as hooks loaded | true,
+| **` stop_time`** |  `Number` | Optional. if passing number it stop counting on that number = null,
 
 
 # Suggestions?
