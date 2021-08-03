@@ -10,7 +10,7 @@ its so lightway and fast
 it reduce developing time and prevent to to define any intervals and functions for it 
 
 <kbd>
-<img src="https://github.com/Amirnajafi/react-native-persian-date-picker/blob/master/demo/demo.gif?raw=true">
+<img src="https://github.com/Amirnajafi/react-time-hooks/blob/master/demo/demo.gif?raw=true">
 </kbd>
 
 The package is both **React** and **React-native** compatible.
