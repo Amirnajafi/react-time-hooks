@@ -26,7 +26,7 @@ const useCountDown = (time = 60, options = {}) => {
                 state.time = state.time - 1;
                 setState({ ...state })
             }
-        }, 2000)
+        }, interval * 1000)
     }
 
     const reset = () => {

@@ -28,7 +28,7 @@ const useTimer = (time = 0, options = {}) => {
             }
 
 
-        }, 2000)
+        }, interval * 1000)
     }
     const reset = () => {
         state.time = interval
