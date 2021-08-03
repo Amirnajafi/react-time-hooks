@@ -12,7 +12,6 @@ const App = () => {
       <h2 className='font-bold text-xl'>useTimer</h2>
       <span>{time}</span>
       <div className='flex space-x-2'>
-
         <button onClick={play}>play</button>
         <button onClick={puase}>pause</button>
         <button onClick={reset}>reset</button>
