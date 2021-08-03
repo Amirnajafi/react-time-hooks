@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # React | React-native Time hooks
 [![NPM Version](https://img.shields.io/npm/v/react-time-hooks.svg?style=flat)](https://www.npmjs.com/package/react-time-hooks)
 <!-- [![Build Status](https://travis-ci.org/rghorbani/react-native-persian-calendar-picker.svg?branch=master)](https://travis-ci.org/rghorbani/react-native-persian-calendar-picker) -->
-
 
 Time hooks help you to use timer and countdown hook in your react and react-native projects 
 <br>
